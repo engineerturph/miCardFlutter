@@ -8,16 +8,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.grey,
         body: SafeArea(
-          child: Container(
-            height: 100.0,
-            width: 100.0,
-            margin: EdgeInsets.fromLTRB(50.0, 10.0, 30.0, 20.0),
-            padding: EdgeInsets.all(20.0),
-            color: Colors.red,
-            child: Text('Hello'),
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                // backgroundColor: Colors.deepPurple,
+                backgroundImage: NetworkImage(
+                    'https://upload.wikimedia.org/wikipedia/commons/4/40/Alexsandro_de_Souza.jpg'),
+              ),
+            ],
           ),
         ),
       ),
@@ -26,3 +29,10 @@ class MyApp extends StatelessWidget {
 }
 //Buranin icindeki degisirse sadece bu kisim degisiyor
 //yeniden acmak yerine hot restart daha ii
+
+// Container(
+// height: 100.0,
+// width: 100.0,
+// color: Colors.red,
+// child: Text('Hello'),
+// ),
