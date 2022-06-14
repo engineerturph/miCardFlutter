@@ -10,16 +10,83 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.blue.shade900,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              SizedBox(
+                width: double.infinity,
+              ),
               CircleAvatar(
                 radius: 50.0,
-                // backgroundColor: Colors.deepPurple,
-                backgroundImage: NetworkImage(
-                    'https://upload.wikimedia.org/wikipedia/commons/4/40/Alexsandro_de_Souza.jpg'),
+                backgroundImage: AssetImage('images/alex.jpg'),
               ),
+              Text(
+                'Alex',
+                style: TextStyle(
+                  color: Colors.yellow,
+                  fontSize: 50.0,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Pacifico',
+                ),
+              ),
+              Text(
+                'FUTBOLCU/EFSANE',
+                style: TextStyle(
+                  color: Colors.yellow,
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 20.0,
+                  letterSpacing: 3,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 250.0,
+                child: Divider(
+                  color: Colors.yellow,
+                ),
+              ),
+              Card(
+                color: Colors.black,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.grey,
+                  ),
+                  title: Text(
+                    '+90 533 333 33 33',
+                    style: TextStyle(
+                      color: Colors.yellow,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                color: Colors.black,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.grey,
+                  ),
+                  title: Text(
+                    'alex@hotmail.com',
+                    style: TextStyle(
+                      color: Colors.yellow,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
         ),
